@@ -1,0 +1,42 @@
+{
+  "name": "pehapkari-alpha/inline-editable-bundle",
+  "type": "library",
+  "description": "Content inline editable bundle for Symfony.",
+  "keywords": [
+    "symfony",
+    "pehapkari"
+  ],
+  "homepage": "http://pehapkari.cz",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Jakub Janata",
+      "email": "jakubjanata@gmail.com"
+    }
+  ],
+  "require": {
+    "php": ">=7.0",
+    "pehapkari-alpha/inline-editable": "^0.1",
+    "symfony/framework-bundle": "^3.2",
+    "twig/twig": "^2.0"
+  },
+  "require-dev": {
+    "doctrine/dbal": "^2.5",
+    "symfony/security": "^3.2",
+    "squizlabs/php_codesniffer": "^2.7",
+    "phpstan/phpstan": "^0.5"
+  },
+  "suggest": {
+    "symfony/security": "If you wanna use default permission checker subscriber"
+  },
+  "autoload": {
+    "psr-4": {
+      "Pehapkari\\InlineEditableBundle\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Pehapkari\\InlineEditableBundle\\Tests\\": "tests/"
+    }
+  }
+}
