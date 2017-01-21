@@ -119,7 +119,7 @@ If you don't have added script *Sensio\Bundle\DistributionBundle\Composer\Script
 .. code-block:: bash
 
     $ cd web/bundles
-    $ ln -s  ../../vendor/freezy-bee/editrouble-bundle/Resources/public/ freezybeeeditrouble
+    $ ln -s  ../../vendor/pehapkari-alpha/inline-editable-bundle/src/Resources/public/ pehapkariinlineeditable
 ..
 
 
@@ -130,29 +130,29 @@ Add subscriber for allow editing. Fox example:
 
 .. code-block:: php
 
-class InlineEnablerSubscriber extends AbstractInlineEnablerSubscriber
-{
-    /**
-     * @var AuthorizationCheckerInterface
-     */
-    private $authorizationChecker;
-
-    /**
-     * @param AuthorizationCheckerInterface $authorizationChecker
-     */
-    public function __construct(AuthorizationCheckerInterface $authorizationChecker)
+    class InlineEnablerSubscriber extends AbstractInlineEnablerSubscriber
     {
-        $this->authorizationChecker = $authorizationChecker;
-    }
+        /**
+         * @var AuthorizationCheckerInterface
+         */
+        private $authorizationChecker;
 
-    /**
-     * @return bool
-     */
-    protected function isAllowedForEditation(): bool
-    {
-        return $this->authorizationChecker->isGranted('ROLE_ADMIN');
+        /**
+         * @param AuthorizationCheckerInterface $authorizationChecker
+         */
+        public function __construct(AuthorizationCheckerInterface $authorizationChecker)
+        {
+            $this->authorizationChecker = $authorizationChecker;
+        }
+
+        /**
+         * @return bool
+         */
+        protected function isAllowedForEditation(): bool
+        {
+            return $this->authorizationChecker->isGranted('ROLE_ADMIN');
+        }
     }
-}
 ..
 
 
@@ -173,4 +173,4 @@ Step 8: Full configuration (optional)
 Step 9: How to use it?
 ----------------------
 
-`Using guide <https://github.com/pehapkari-alpha/inline-editable-bundle/blob/master/Resources/doc/using.rst>`_
+`Using guide <https://github.com/pehapkari-alpha/inline-editable-bundle/blob/master/src/Resources/doc/using.rst>`_

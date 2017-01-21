@@ -4,7 +4,7 @@ Using guide
 Installation
 ------------
 
-First install bundle and add routes + js file block (`installation <https://github.com/pehapkari-alpha/inline-editable-bundle/blob/master/Resources/doc/installation.rst>`_).
+First install bundle and add routes + js file block (`installation <https://github.com/pehapkari-alpha/inline-editable-bundle/blob/master/src/Resources/doc/installation.rst>`_).
 
 
 How it works?
@@ -23,25 +23,26 @@ Warning!!! There's no XSS protection. Admin can add XSS and so on...
 .. code-block:: twig
 
     {# basic usage - generate div tag #}
-    {{ inline_editrable('name') }}
+    {{ inline_editable('name') }}
 
     {# with html attributes #}
-    {{ inline_editrable('name', {attr: {class: 'super-text'}}) }}
+    {{ inline_editable('name', {attr: {class: 'super-text'}}) }}
 
     {# generate specifig tag #}
-    {{ inline_editrable_h1('name-H1') }}
-    {{ inline_editrable_span('name-span') }}
-    {{ inline_editrable_strong('name-strong') }}
+    {# available: h1, h2, h3, h4, h5, h6, span, strong, a, div #}
+    {{ inline_editable_h1('name-h1') }}
+    {{ inline_editable_span('name-span') }}
+    {{ inline_editable_strong('name-strong') }}
 
     {# override locale #}
-    {{ inline_editrable('custom-locale', {locale: 'de'}) }}
+    {{ inline_editable('custom-locale', {locale: 'de'}) }}
 
     {# override namespace #}
-    {{ inline_editrable('custom-namespace', {namespace: 'superNamespace'}) }}
+    {{ inline_editable('custom-namespace', {namespace: 'superNamespace'}) }}
 
     {# using namespace #}
     {% inline_namespace testNamespace %}
-        {{ inline_editrable('using-global-namespace') }}
+        {{ inline_editable('using-global-namespace') }}
     {% end_inline_namespace %}
 
     {# using namespace - don't forget add this line to end of body!!!  #}

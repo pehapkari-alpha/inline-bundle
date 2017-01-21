@@ -22,5 +22,11 @@ Installation
 The best way to install Pehapkari/InlineEditableBundle is using [Composer](http://getcomposer.org/):
 
 ```sh
-$ composer require pehapkari/inline-editable-bundle
+$ composer require pehapkari-alpha/inline-editable-bundle
 ```
+
+
+Documentation
+------------
+
+Learn how to use InlineEditableBundle in [documentation](https://github.com/pehapkari-alpha/inline-editable-bundle/blob/master/src/Resources/doc/installation.rst).
