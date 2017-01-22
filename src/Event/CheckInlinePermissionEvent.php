@@ -38,7 +38,7 @@ class CheckInlinePermissionEvent extends Event
     /**
      *
      */
-    public function setAllowed(): void
+    public function setAllowed()
     {
         $this->editationAllowed = true;
     }
@@ -46,7 +46,7 @@ class CheckInlinePermissionEvent extends Event
     /**
      *
      */
-    public function setDisabled(): void
+    public function setDisabled()
     {
         $this->editationAllowed = false;
     }
