@@ -16,7 +16,7 @@
   ],
   "require": {
     "php": ">=7.0",
-    "pehapkari-alpha/inline-editable": "^0.1",
+    "pehapkari-alpha/inline-editable": "@dev",
     "symfony/framework-bundle": "^3.2",
     "twig/twig": "^2.0"
   },
@@ -24,7 +24,7 @@
     "doctrine/dbal": "^2.5",
     "symfony/security": "^3.2",
     "squizlabs/php_codesniffer": "^2.7",
-    "phpstan/phpstan": "^0.5"
+    "phpstan/phpstan": "@dev"
   },
   "suggest": {
     "symfony/security": "If you wanna use default permission checker subscriber"
